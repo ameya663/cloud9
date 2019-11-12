@@ -1,11 +1,19 @@
 sysctl -a | grep -E --color 'machdep.cpu.features|VMX' 
 
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+brew install kubectl
+brew link kubernetes-cli
 
-chmod +x ./kubectl
-
-sudo mv ./kubectl /usr/local/bin/kubectl
+brew link --overwrite kubernetes-cli
 
 xcode-select --install (BEFORE MINIKUBE)
 
 brew install minikube
+
+
+DASHBOARD:
+
+sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
+
+kubectl proxy
+
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
