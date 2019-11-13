@@ -25,3 +25,13 @@ minikube dashboard
 CONTAINER REGISTRY:
 minikube addons configure registry-creds
 minikube addons enable registry-creds
+
+
+spec:
+  template:
+    spec:
+      containers:
+      - name: my-container
+        image: ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/ECR_REPO:latest
+      imagePullSecrets:
+      - name: awsecr-cred
