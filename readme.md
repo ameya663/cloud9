@@ -38,3 +38,6 @@ spec:
         image: ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/ECR_REPO:latest
       imagePullSecrets:
       - name: awsecr-cred
+      
+      
+   brew install docker-credential-helper-ecr
