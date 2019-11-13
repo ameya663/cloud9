@@ -20,3 +20,8 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 
 
 minikube dashboard
+
+
+CONTAINER REGISTRY:
+minikube addons configure registry-creds
+minikube addons enable registry-creds
