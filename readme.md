@@ -23,8 +23,11 @@ minikube dashboard
 
 
 CONTAINER REGISTRY:
+minikube start
+minikube addons enable ingress
 minikube addons configure registry-creds
 minikube addons enable registry-creds
+kubectl apply -f deployment.yaml
 
 
 spec:
