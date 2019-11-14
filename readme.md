@@ -52,3 +52,6 @@ IN>> ~/.docker/config.json
 IN>> nano ~/.aws/credentials
 
 
+minikube service drt-darp-solver-frontend -n drt --url
+
+
