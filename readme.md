@@ -54,4 +54,5 @@ IN>> nano ~/.aws/credentials
 
 minikube service drt-darp-solver-frontend -n drt --url
 
-
+kubectl get pods -n drt
+kubectl logs [POD_NAME] -n drt
