@@ -41,3 +41,14 @@ spec:
       
       
    brew install docker-credential-helper-ecr
+IN>> ~/.docker/config.json
+
+{
+	"credHelpers": {
+		"aws_account_id.dkr.ecr.region.amazonaws.com": "ecr-login"
+	}
+}
+
+IN>> nano ~/.aws/credentials
+
+
