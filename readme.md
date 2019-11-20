@@ -58,3 +58,6 @@ kubectl get pods -n drt
 kubectl logs [POD_NAME] -n drt
 
 kubectl exec osrm-routing-core-cd86cd8dd-v7bm4 -n drt -i -t -- /bin/sh
+
+Grafana port forwarding
+kubectl --namespace monitoring port-forward grafana-59999fcf64-vzlrs 3000
